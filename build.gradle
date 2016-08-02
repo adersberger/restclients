@@ -1,0 +1,39 @@
+group 'de.qaware.playground'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.0.2-1"
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'kotlin'
+apply plugin: 'idea'
+
+version = '0.1.0'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib:1.0.2-1"
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+
+    // https://mvnrepository.com/artifact/com.squareup.retrofit2/retrofit
+    compile group: 'com.squareup.retrofit2', name: 'retrofit', version: '2.1.0'
+
+    // https://mvnrepository.com/artifact/com.netflix.feign/feign-core
+    compile group: 'com.netflix.feign', name: 'feign-core', version: '8.17.0'
+    compile 'com.netflix.feign:feign-gson:8.17.0'
+
+    // https://mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson
+    compile group: 'com.squareup.retrofit2', name: 'converter-gson', version: '2.1.0'
+
+}
